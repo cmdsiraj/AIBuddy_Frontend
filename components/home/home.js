@@ -65,6 +65,7 @@ export async function loadHomeComponent(mountId = "app") {
 
     // for now saving history on both sides and sending only one message each time
     try {
+      setMessage("");
       const result = await chat(userMessage);
       // console.log(result);
       addMessage(result.content, result.role);
@@ -74,6 +75,7 @@ export async function loadHomeComponent(mountId = "app") {
         "Error while sending message to agent " +
           (err.message || "Unknown error")
       );
+      setMessage(userMessage);
     }
   }
 

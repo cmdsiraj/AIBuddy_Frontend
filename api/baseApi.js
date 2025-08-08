@@ -1,4 +1,5 @@
 import { getToken } from "../utils/localstorage.js";
+import { showLoader, hideLoader } from "../utils/loading.js";
 
 export async function apiFetch(method, url, data = null, headers = {}) {
   const options = {
@@ -15,6 +16,7 @@ export async function apiFetch(method, url, data = null, headers = {}) {
     options.body = JSON.stringify(data);
   }
   //   alert(data);
+  showLoader();
   try {
     const response = await fetch(url, options);
     if (!response.ok) {
@@ -34,6 +36,8 @@ export async function apiFetch(method, url, data = null, headers = {}) {
     }
   } catch (error) {
     throw error;
+  } finally {
+    hideLoader();
   }
 }
 
