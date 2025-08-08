@@ -7,7 +7,7 @@ import { route } from "../../routes.js";
 const messages = [];
 
 export async function loadHomeComponent(mountId = "app") {
-  addCSS("./components/Home/home.css");
+  addCSS("./components/home/home.css");
   const response = await fetch("./components/home/home.html");
   const html = await response.text();
   document.getElementById(mountId).innerHTML = html;
