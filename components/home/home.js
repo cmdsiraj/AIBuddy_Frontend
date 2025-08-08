@@ -29,7 +29,7 @@ export async function loadHomeComponent(mountId = "app") {
 
   const render = () => {
     messagesView.innerHTML =
-      "<h1 style='text-align: center'>Start Talking with <br> The Overqualified Intern!</h1>";
+      "<h3 style='text-align: center'>Start Talking with <br> The Overqualified Intern!</h3>";
 
     getMessages().forEach((message) => {
       const div = document.createElement("div");

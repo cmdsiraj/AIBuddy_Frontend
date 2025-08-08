@@ -10,8 +10,8 @@
 
   bottom: 6rem;
   top: 6rem;
-  left: 16rem;
-  right: 16rem;
+  left: 12rem;
+  right: 12rem;
 
   display: flex;
   flex-direction: column;
@@ -118,4 +118,42 @@
   justify-content: center;
 
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .chat-screen {
+    bottom: 2rem;
+    top: 6rem;
+    left: 2rem;
+    right: 2rem;
+
+    z-index: -1;
+
+    /* gap: 2rem; */
+  }
+
+  .logout-btn {
+    width: 6rem;
+    height: 3rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .chat-screen {
+    bottom: 2rem;
+    top: 6rem;
+    left: 2rem;
+    right: 2rem;
+
+    z-index: -1;
+
+    /* gap: 2rem; */
+  }
+
+  .logout-btn {
+    width: 6rem;
+    height: 3rem;
+    font-size: 1.2rem;
+  }
 }
