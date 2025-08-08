@@ -8,7 +8,7 @@ const routes = {
     handler: "loadLoginComponent",
   },
   home: {
-    path: "./components/Home/home.js",
+    path: "./components/home/home.js",
     handler: "loadHomeComponent",
   },
 };
